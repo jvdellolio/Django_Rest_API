@@ -29,11 +29,14 @@ Para executar o Django REST API em sua máquina local, siga os passos abaixo:
    ```bash
    git clone https://github.com/jvdellolio/Django_Rest_API.git
    cd Django_Rest_API
-
+   ```
+   
    2. Crie um ambiente virtual:
-
+  
    ```bash
    python -m venv env
+   ```
+   
 3. **Ative o ambiente virtual**:
 
    - Para Windows:
