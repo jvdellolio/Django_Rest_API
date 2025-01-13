@@ -1,62 +1,75 @@
-Django REST API - Documentation
-Description
-This is a project aimed at creating a RESTful API using Django and Django REST Framework. It serves as a backend for managing data in a Django application, providing endpoints for client applications to interact with the data.
+# Django REST API
 
-Project Setup
-1. Clone the Repository
-bash
-Copiar código
-git clone https://github.com/jvdellolio/Django_Rest_API.git
-2. Install Dependencies
-Make sure you have Python 3.x installed. Create and activate a virtual environment:
+Django REST API é um projeto desenvolvido em Django com o Django Rest Framework, focado na criação de uma API RESTful para gerenciar dados e servir como backend para qualquer aplicação frontend. Este repositório contém a base de uma API para gerenciar diferentes recursos (como livros, usuários, etc.) com operações básicas de CRUD.
 
-bash
-Copiar código
-python -m venv venv
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
-Then, install the required dependencies:
+## Funcionalidades
 
-bash
-Copiar código
-pip install -r requirements.txt
-Running the Project
-1. Apply Migrations
-Run the following command to apply migrations to your database:
+- Cadastro de recursos (como livros, usuários, etc.)
+- Leitura de dados: exibe a lista completa de itens cadastrados e permite visualizar detalhes
+- Atualização de registros existentes
+- Exclusão de itens
+- Autenticação e autorização utilizando JWT
+- Documentação automática da API com drf-yasg
 
-bash
-Copiar código
-python manage.py migrate
-2. Run the Development Server
-Start the Django development server:
+## Tecnologias Utilizadas
 
-bash
-Copiar código
-python manage.py runserver
-Once the server is running, you can access the API at:
+- **Python**: Linguagem de programação principal.
+- **Django**: Framework web para criação da API.
+- **Django Rest Framework**: Biblioteca para a construção de APIs RESTful.
+- **SQLite**: Banco de dados utilizado para persistência de dados (pode ser alterado para outro, como PostgreSQL, se desejado).
+- **drf-yasg**: Geração automática de documentação da API.
+- **djangorestframework-simplejwt**: Implementação de autenticação JWT para os usuários.
 
-arduino
-Copiar código
-http://127.0.0.1:8000/api/
-Endpoints
-Available API Endpoints
-GET /api/: Get a list of all resources.
-POST /api/: Create a new resource.
-GET /api/{id}/: Retrieve a specific resource by ID.
-PUT /api/{id}/: Update a resource by ID.
-DELETE /api/{id}/: Delete a resource by ID.
-Testing the API
-You can test the API using tools like Postman or cURL. For example, to list all resources, you can use the following cURL command:
+## Instalação
 
-bash
-Copiar código
-curl http://127.0.0.1:8000/api/
-Contributing
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push to your forked repository and create a pull request.
-License
-This project is open-source and available under the MIT License.
+Para executar o Django REST API em sua máquina local, siga os passos abaixo:
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/jvdellolio/Django_Rest_API.git
+   cd Django_Rest_API
+
+   2. Crie um ambiente virtual:
+
+   ```bash
+   python -m venv env
+3. **Ative o ambiente virtual**:
+
+   - Para Windows:
+
+     ```bash
+     env\Scripts\activate
+     ```
+
+   - Para Linux/Mac:
+
+     ```bash
+     source env/bin/activate
+     ```
+
+4. **Instale as dependências**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+   5. **Faça push para a branch**:
+
+   ```bash
+   git push origin feature/nome-da-feature
+   ```
+
+   6. **Abra um Pull Request**:
+
+   - Vá para a página do seu repositório forked no GitHub.
+   - Clique no botão **Compare & pull request**.
+   - Descreva suas alterações e clique em **Create pull request**.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Autor
+
+João Vitor Lima Dell'Olio - [jvdellolio](https://github.com/jvdellolio)
+
